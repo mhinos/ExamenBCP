@@ -1,0 +1,129 @@
+package pe.com.bcp.devskiller;
+
+import io.restassured.response.Response;
+import org.junit.Test;
+
+import static io.restassured.RestAssured.when;
+import static org.hamcrest.Matchers.*;
+import sun.reflect.generics.reflectiveObjects.NotImplementedException;
+
+/**
+ * Por favor ir a https://gorest.co.in/ para obtener más información
+ *
+ * Algunos endpoints:
+ * https://gorest.co.in/public/v2/users
+ * https://gorest.co.in/public/v2/posts
+ * https://gorest.co.in/public/v2/comments
+ * https://gorest.co.in/public/v2/todos
+ *
+ * 1.- debe verificar si el endpoint de Users esta disponible
+ * VERIFICADO CON POSTMAN. SI ESTA DISPONIBLE
+ * 2.- debe verificar que el usuario con ID [XXXX] está Active
+ * LA LISTA ESTA AL FINAL DEl ARCHIVO. TAMBIEN OBTUVE UNA CAPTURA DE PANTALLA Y LA AGREGUE COMO PNG
+ * Nota: Para obtener ID del usuario hacer un [GET] /users y revisar los usuarios Active
+ * o usar el método getActiveUser()
+ */
+public class ApiTest extends BaseTest {
+
+
+    public Response getUsersEndpointResponse() {
+//        devolver correctamente la Response
+        return null;
+    }
+
+
+    @Test
+    public void serviceIsOKTest()
+    {
+//        Validar que el servicio esté disponible
+        getUsersEndpointResponse().then().assertThat().statusCode(1);
+    }
+
+    public Response getUserByIdResponse() {
+//        devolver correctamente la Response de User por ID
+//        puedes usar el método getActiveUserId()
+        return when().get("");
+    }
+
+    @Test
+    public void resourceIsActiveTest()
+    {
+//        Validar que el User obtenido tiene status:active
+        throw new NotImplementedException();
+    }
+    /* ACA ESTA LA LISTA DE USUARIOS ACTIVOS
+    [
+     {
+         "id": 4301,
+         "name": "Dr. Bhoopat Talwar",
+         "email": "dr_bhoopat_talwar@sporer-hackett.biz",
+         "gender": "female",
+         "status": "active"
+     },
+     {
+         "id": 4298,
+         "name": "Bhaasvan Marar",
+         "email": "bhaasvan_marar@buckridge-renner.com",
+         "gender": "male",
+         "status": "active"
+     },
+     {
+         "id": 4297,
+         "name": "Ankal Trivedi",
+         "email": "trivedi_ankal@block.org",
+         "gender": "male",
+         "status": "active"
+     },
+     {
+         "id": 4296,
+         "name": "Devani Chopra",
+         "email": "chopra_devani@williamson-barrows.name",
+         "gender": "female",
+         "status": "active"
+     },
+     {
+         "id": 4294,
+         "name": "Gov. Keerti Ahluwalia",
+         "email": "keerti_gov_ahluwalia@buckridge.net",
+         "gender": "male",
+         "status": "active"
+     },
+     {
+         "id": 4293,
+         "name": "Prof. Ashok Joshi",
+         "email": "joshi_prof_ashok@simonis.org",
+         "gender": "female",
+         "status": "active"
+     },
+     {
+         "id": 4289,
+         "name": "Shankar Tagore Ret.",
+         "email": "ret_shankar_tagore@lockman-will.name",
+         "gender": "male",
+         "status": "active"
+     },
+     {
+         "id": 4287,
+         "name": "Nalini Naik",
+         "email": "naik_nalini@kreiger-bogisich.org",
+         "gender": "female",
+         "status": "active"
+     },
+     {
+         "id": 4285,
+         "name": "Amb. Adinath Achari",
+         "email": "achari_amb_adinath@emard.name",
+         "gender": "male",
+         "status": "active"
+     },
+     {
+         "id": 4284,
+         "name": "Subhash Nambeesan",
+         "email": "subhash_nambeesan@hagenes.net",
+         "gender": "male",
+         "status": "active"
+     }
+      ]
+     */
+
+}
